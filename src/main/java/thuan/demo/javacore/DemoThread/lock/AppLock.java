@@ -1,21 +1,21 @@
-package thuan.demo.javacore.DemoThread;
+package thuan.demo.javacore.DemoThread.lock;
 
 /**
  * Hello world!
  *
  */
-public class App {
+public class AppLock {
 	public static void main(String[] args) {
 		test();
 	}
 
 	private static void test() {
 		long startTime = System.currentTimeMillis();
-		MyThread thread1 = new MyThread("thread1");
-		MyThread thread2 = new MyThread("thread2");
-		MyThread thread3 = new MyThread("thread3");
-		MyThread thread4 = new MyThread("thread4");
-		MyThread thread5 = new MyThread("thread5");
+		MyThreadLock thread1 = new MyThreadLock("thread1");
+		MyThreadLock thread2 = new MyThreadLock("thread2");
+		MyThreadLock thread3 = new MyThreadLock("thread3");
+		MyThreadLock thread4 = new MyThreadLock("thread4");
+		MyThreadLock thread5 = new MyThreadLock("thread5");
 
 		thread1.start();
 		thread2.start();
@@ -33,7 +33,7 @@ public class App {
 			e.printStackTrace();
 		}
 
-		System.out.println("Final " + Product.quantity);
+		System.out.println("Final " + ProductLock.quantity);
 		long endTime = System.currentTimeMillis();
 		System.out.println("Total Time = " + (endTime - startTime));
 	}
