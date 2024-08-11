@@ -8,7 +8,7 @@ public class FixedThreadPoolExample {
 	public static void main(String[] args) {
 		ExecutorService executor = Executors.newFixedThreadPool(5);
 
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= 3; i++) {
 			Runnable worker = new WorkerThread("" + i);
 			executor.execute(worker);
 		}
